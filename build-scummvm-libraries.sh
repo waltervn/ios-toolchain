@@ -56,8 +56,7 @@ BUILD_DIR=`pwd`
 # Note that iOS SDKs have dynamic libraries, however, sometimes development
 # headers are missing. Additionally, ScummVM statically links bzip2 when
 # FreeType2 is enabled.
-BZIP2_VERSION=1.0.6
-setup_library "bzip2-$BZIP2_VERSION" "tar.gz" "http://www.bzip.org/$BZIP2_VERSION/"
+setup_library "bzip2-1.0.6" "tar.gz" "https://sourceforge.net/projects/bzip2/files/"
 for i in $TARGETS; do
 	export TARGET="$i"
 	"$SOURCE_DIR"/build-libbz2.sh || exit 1
@@ -88,7 +87,7 @@ setup_library "libjpeg-turbo-1.4.2" "tar.gz" "http://sourceforge.net/projects/li
 compile_library --with-jpeg7 --with-jpeg8 --without-turbojpeg
 
 # libpng
-setup_library "libpng-1.6.21" "tar.xz" "ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/"
+setup_library "libpng-1.6.21" "tar.xz" "https://sourceforge.net/projects/libpng/files/libpng16/older-releases/1.6.21/"
 compile_library
 
 # libmad
